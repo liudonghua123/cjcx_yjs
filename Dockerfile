@@ -1,13 +1,4 @@
-FROM thiswind/python
-
-ENV DEBIAN_FRONTEND noninteractive
-
-#RUN apt-get update
-#RUN apt-get -y install build-essential python-dev libffi-dev libssl-dev
-
-
-RUN pip install --upgrade pip
-#RUN pip install urllib3[secure]
+FROM python:3.6.0
 
 RUN mkdir /app
 
@@ -18,8 +9,8 @@ COPY app/data.xlsx /app/data.xlsx
 COPY app/templates /app/templates
 COPY app/app.py /app/app.py
 
-COPY run.sh /run.sh
-
 EXPOSE 5000
 
-CMD ["/run.sh"]
+WORKDIR /app
+
+CMD python app.py runserver -h 0.0.0.0 -p 5000

@@ -1,0 +1,6 @@
+# python pplication for cjcx_yjs
+cjcx_yjs:
+    image: ynuae/cjcx_yjs
+    ports:
+      - "50015:5000"
+    restart: always
