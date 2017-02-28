@@ -1,0 +1,57 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}研究生入学考试成绩查询{% endblock %}
+
+{% block navbar %}
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">硕士研究生入学考试成绩查询</a>
+            </div>
+
+        </div>
+    </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {% for message in get_flashed_messages() %}
+            <div class="alert alert-warning">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{ message }}
+            </div>
+        {% endfor %}
+
+        {% block page_content %}{% endblock %}
+    </div>
+
+    <div class="footer">
+        <div class="container">
+
+{#            <div style="clear: both;display: block;text-align: center;margin: 0px auto;position: absolute;bottom: 100px;width: 100%">#}
+{#                <p>云南大学信息技术中心开发和维护</p>#}
+{#            </div>#}
+        </div>
+    </div>
+
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=54751002" charset="UTF-8"></script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

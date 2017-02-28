@@ -1,0 +1,7 @@
+certifi
+flask
+flask-Script
+flask-bootstrap
+flask-moment
+flask-wtf
+xlrd
